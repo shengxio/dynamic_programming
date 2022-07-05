@@ -16,3 +16,4 @@ if __name__ == '__main__':
     print(None,howSum(7,[2,4])) # None
     print(None,howSum(300,[7,14])) # None
     print([],howSum(300,[7,14,25,2,45])) # []
+    print([],howSum(291,[3,17,4,22,31,9]))
