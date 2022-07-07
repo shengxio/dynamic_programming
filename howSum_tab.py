@@ -10,6 +10,11 @@ def howSum(target, nums):
                     table_dict[i] = table_dict[i-j] + [j]
                     if i == target:
                         return table_dict[i]
+
+    # m = target size
+    # n = nums size
+    # time complexity: O(m^2*n)
+    # space complexity: O(m^2)
     
 if __name__ == '__main__':
     print([3,4],howSum(7,[5,3,4,7])) # [3,4]

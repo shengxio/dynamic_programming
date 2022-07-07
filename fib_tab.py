@@ -13,6 +13,9 @@ def fib(n:int):
             tabula[i+2] += tabula[i] 
 
     return tabula[n]
+    # n = fibonacci index
+    # time complexity: O(n)
+    # space complexity: O(n)
 
 if __name__ == '__main__':
     print(fib(6))

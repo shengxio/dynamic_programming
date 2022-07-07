@@ -11,6 +11,8 @@ def gridTravel(m:int,n:int,grid:dict={}):
     grid[(m,n)] = gridTravel(m-1,n,grid) + gridTravel(m,n-1,grid) # recursive call
 
     return grid[(m,n)]
+    # m = grid x size
+    # n = grid y size
     # time complexity: O(m*n)
     # space complexity: O(m+n)
 

@@ -11,6 +11,7 @@ def fib(n:int,memo:dict={}):
     memo[n]=fib(n-1,memo) + fib(n-2,memo) # recursive call
 
     return memo[n]
+    # n = fibonacci index
     # time complexity: O(n)
     # space complexity: O(n)
 

@@ -10,6 +10,11 @@ def canSum(n:int,numbers:list):
     
     return table_dict[n]
 
+    # m = target size
+    # n = nums size
+    # time complexity: O(m*n)
+    # space complexity: O(m)
+
 if __name__ == '__main__':
     print("True",canSum(7,[5,3,4,7])) # True
     print("False",canSum(7,[2,4])) # False

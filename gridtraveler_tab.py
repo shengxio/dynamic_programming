@@ -13,6 +13,10 @@ def gridTravel(m:int,n:int):
                 grid[(i,j+1)] += grid[(i,j)]
 
     return grid[(m,n)]
+    # m = grid x size
+    # n = grid y size
+    # time complexity: O(m*n)
+    # space complexity: O(m*n)
 
 if __name__ == '__main__':
     print(1,gridTravel(1, 1))

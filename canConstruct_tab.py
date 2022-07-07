@@ -8,6 +8,11 @@ def canConstruct(target, components):
             if i >= len(c) and target[i-len(c):i]==c:
                 table_form[i] = table_form[i] or table_form[i-len(c)]
     return table_form[len(target)]
+
+    # m = target size
+    # n = components size
+    # time complexity: O(m^2*n)
+    # space complexity: O(m)
         
 
 if __name__ == '__main__':

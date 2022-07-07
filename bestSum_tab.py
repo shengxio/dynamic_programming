@@ -16,6 +16,11 @@ def bestSum(target, nums):
                 if len(array_nums[i]) > len(result):
                     array_nums[i] = result
     return array_nums[target]
+
+    # m = target size
+    # n = nums size
+    # time complexity: O(m^2*n)
+    # space complexity: O(m^2)
                 
 if __name__ == '__main__':
     print([7],bestSum(7,[5,3,4,1,7])) # [3,4]
