@@ -19,7 +19,7 @@ def bestSum(target, nums):
 
     # m = target size
     # n = nums size
-    # time complexity: O(m^2*n)
+    # time complexity: O(m*n)
     # space complexity: O(m^2)
                 
 if __name__ == '__main__':

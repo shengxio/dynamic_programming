@@ -11,7 +11,7 @@ def canConstruct(target, components):
 
     # m = target size
     # n = components size
-    # time complexity: O(m^2*n)
+    # time complexity: O(m*n)
     # space complexity: O(m)
         
 
