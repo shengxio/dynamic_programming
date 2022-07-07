@@ -1,13 +1,17 @@
-def canSum(n:int,numbers:list,memo:dict=None):
+def canSum(target:int,numbers:list,memo:dict=None):
     if memo is None: memo = {} # initialize memotrization
-    if n < 0:   return False # base case 2
-    if n == 0:  return True # base case
-    if n in memo.keys(): return memo[n] # memoization
+    if target < 0:   return False # base case 2
+    if target == 0:  return True # base case
+    if target in memo.keys(): return memo[target] # memoization
 
-    memo[n] = any([canSum(n-m,numbers,memo) for m in numbers])
-    print(n,memo[n])
+    memo[target] = any([canSum(target-m,numbers,memo) for m in numbers])
+    print(target,memo[target])
 
-    return memo[n]
+    return memo[target]
+    # m = target size
+    # n = numbers length
+    # time complexity: O(m*n)
+    # space complexity: O(m)
 
 if __name__ == '__main__':
     print("True",canSum(7,[5,3,4,7])) # True

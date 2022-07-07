@@ -1,15 +1,20 @@
-def countConstruct(target, components,memo=None):
-    if memo is None:    memo = {}
+def countConstruct(target, components):
     if target == "":    return 1 # base case
-    if target in memo:  return memo[target]
     
-    memo[target] = sum([countConstruct(target.replace(c,"",1),components,memo) for c in components if c == target[:len(c)]])
-    return memo[target]
+    construct_table = {i:0 for i in range(len(target)+1)}
+    construct_table[0] = 1
+
+    for i in range(len(target)+1):
+        for c in components:
+            if i >= len(c) and target[i-len(c):i] == c:
+                construct_table[i] += construct_table[i-len(c)]
+
+    return construct_table[len(target)]
 
     # m = target size
     # n = components size
     # time complexity: O(m^2*n)
-    # space complexity: O(m^2)
+    # space complexity: O(m)
         
 
 if __name__ == '__main__':

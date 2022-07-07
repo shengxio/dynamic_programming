@@ -16,6 +16,10 @@ def howSum(target, nums, memo=None):
 
     memo[target] = None
     return memo[target]
+    # m = target size
+    # n = nums size
+    # time complexity: O(m^2*n)
+    # space complexity: O(m^2)    
     
 if __name__ == '__main__':
     print([3,4],howSum(7,[5,3,4,7])) # [3,4]

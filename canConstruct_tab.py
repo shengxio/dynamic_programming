@@ -1,12 +1,14 @@
 def canConstruct(target, components):
     if target == "":    return True # base case
     
-    result = any([canConstruct(target.replace(c,"",1),components) for c in components if c == target[:len(c)]])
-    return result
-    # m = target size
-    # n = components size
-    # time complexity: O(m^2*n)
-    # space complexity: O(m^2)
+    table_form = {i:False for i in range(len(target)+1)}
+    table_form[0] = True
+    for i in table_form:
+        for c in components:
+            if i >= len(c) and target[i-len(c):i]==c:
+                table_form[i] = table_form[i] or table_form[i-len(c)]
+    return table_form[len(target)]
+        
 
 if __name__ == '__main__':
     print(True,canConstruct("abcdef",["abc","cde","efg","cd","ef"]))

@@ -10,6 +10,10 @@ def allConstruct(target, components,memo=None):
             memo[target] += ls_temp
 
     return memo[target]
+    # m = target size
+    # n = components size
+    # time complexity: O(n^m)
+    # space complexity: O(m^2)
         
 
 if __name__ == '__main__':

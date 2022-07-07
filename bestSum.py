@@ -20,6 +20,11 @@ def bestSum(target, nums, memo=None):
     # print(target, memo)
 
     return memo[target].copy() if memo[target] is not None else None
+
+    # m = target size
+    # n = nums size
+    # time complexity: O(m^2*n)
+    # space complexity: O(m^2)
     
 if __name__ == '__main__':
     print([7],bestSum(7,[5,3,4,1,7])) # [3,4]
